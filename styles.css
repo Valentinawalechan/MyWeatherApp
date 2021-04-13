@@ -109,3 +109,10 @@ img {
   margin-top: 12px;
   margin-bottom: -12px;
 }
+
+.gitHubLink {
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 2px;
+  color: #6836c5;
+}
