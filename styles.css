@@ -1,0 +1,111 @@
+body {
+  box-sizing: border-box;
+  background-color: white;
+  font-family: "Patrick Hand", cursive;
+}
+
+h1,
+h2 {
+  color: #6836c5;
+  text-align: center;
+  font-weight: 900;
+}
+
+form {
+  margin-top: 15px;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+.container {
+  max-width: 700px;
+  background-image: url(src/sky.jpg);
+  background-repeat: no-repeat;
+  background-size: 700px;
+  margin: 0 auto;
+  padding: 20px 20px;
+  border: 2px solid #6836c5;
+  border-radius: 20px;
+}
+
+#location-button,
+#search-bar,
+#search-button {
+  border-radius: 10px;
+  background-color: #b697ee;
+  color: #6836c5;
+  font-weight: bold;
+}
+
+.form-check-input {
+  position: relative;
+  left: 580px;
+  top: -31px;
+  background-color: #b697ee;
+}
+
+.form-check-label {
+  position: relative;
+  left: 580px;
+  top: -37px;
+}
+#cel,
+#fahr {
+  text-decoration: none;
+  color: #6836c5;
+}
+
+.card {
+  background-color: transparent;
+  text-align: center;
+  border: 1px solid #6836c5;
+  border-radius: 20px;
+}
+
+.city {
+  padding: 0 20px 0 0;
+}
+
+.forecast {
+  padding: 0 0 0 80px;
+  color: #6836c5;
+}
+
+.temperature {
+  padding: 0 0 0 70px;
+}
+
+.card,
+.city,
+.forecast,
+.temperature,
+.form-check-label {
+  color: #6836c5;
+  font-size: 22px;
+}
+
+.MainCity,
+.dayForecast,
+.currentTemperature {
+  font-size: 35px;
+}
+
+.dayForecast,
+.currentTemperature {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.maxMin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.emoji {
+  margin-top: 12px;
+  margin-bottom: -12px;
+}
