@@ -39,6 +39,9 @@ document.querySelector(".currentTemperature").innerHTML = `${Math.round(response
 document.querySelector("#humidity").innerHTML = `${response.data.main.humidity}%`;
 document.querySelector("#wind").innerHTML =Math.round(response.data.wind.speed)
 document.querySelector(".dayForecast").innerHTML =  response.data.weather[0].description;
+let iconElement = document.querySelector("#icon");
+iconElement.setAttribute(`src`, `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+icon.Element.setAttribute("alt", response.data.weather[0].description);
 }
 
 function search(city) {
