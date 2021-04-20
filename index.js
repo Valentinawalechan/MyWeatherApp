@@ -87,11 +87,11 @@ search("London");
 
 let fahernheitLink = document.
 
-function showFahrenheit(event) {
-  event.preventDefault();
-  let farhenheitTemperature = (14 * 9) / 5 + 32 = 32;
-  let temperatureElement = document.querySelector(".currentTemperature");
-  temperatureElement.innerHTML = Math.round(farhenheitTemperature);
+//function showFahrenheit(event) {
+  //event.preventDefault();
+  //let farhenheitTemperature = (14 * 9) / 5 + 32 = 32;
+  //let temperatureElement = document.querySelector(".currentTemperature");
+  //temperatureElement.innerHTML = Math.round(farhenheitTemperature);
   // if (tempSwitch.checked) {
    //let fahr = document.querySelector(".currentTemperature");
    //fahr.innerHTML = "66°";
@@ -103,8 +103,8 @@ function showFahrenheit(event) {
    //let maxCel = document.querySelector(".maxMin");
    //maxCel.innerHTML = "22°/17°";
   //}
-}
+//}
 
 
-let tempSwitch = document.querySelector("#myCheck");
-tempSwitch.addEventListener("click", showFahrenheit);
+//let tempSwitch = document.querySelector("#myCheck");
+//tempSwitch.addEventListener("click", showFahrenheit);
