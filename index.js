@@ -85,7 +85,7 @@ currentButton.addEventListener("click", getPosition);
 
 search("London");
 
-let fahernheitLink = document.
+
 
 //function showFahrenheit(event) {
   //event.preventDefault();
