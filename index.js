@@ -77,21 +77,8 @@ navigator.geolocation.getCurrentPosition(getLocation);
 }
 
 
-let typeCity = document.querySelector(".search");
-typeCity.addEventListener("submit", searchCity);
 
-let currentButton = document.querySelector("#location-button");
-currentButton.addEventListener("click", getPosition);
-
-search("London");
-
-
-
-//function showFahrenheit(event) {
-  //event.preventDefault();
-  //let farhenheitTemperature = (14 * 9) / 5 + 32 = 32;
-  //let temperatureElement = document.querySelector(".currentTemperature");
-  //temperatureElement.innerHTML = Math.round(farhenheitTemperature);
+//function checkMode(event) {
   // if (tempSwitch.checked) {
    //let fahr = document.querySelector(".currentTemperature");
    //fahr.innerHTML = "66°";
@@ -107,4 +94,13 @@ search("London");
 
 
 //let tempSwitch = document.querySelector("#myCheck");
-//tempSwitch.addEventListener("click", showFahrenheit);
+//tempSwitch.addEventListener("click", checkMode);
+
+
+let typeCity = document.querySelector(".search");
+typeCity.addEventListener("submit", searchCity);
+
+let currentButton = document.querySelector("#location-button");
+currentButton.addEventListener("click", getPosition);
+
+search("London");
