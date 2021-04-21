@@ -48,13 +48,16 @@ img {
 
 .form-check-label {
   position: relative;
-  left: 580px;
-  top: -37px;
+  left: 570px;
+  top: 35px;
 }
 #cel,
 #fahr {
   text-decoration: none;
   color: #6836c5;
+  font-size: medium;
+  font-weight: 600;
+  cursor: default;
 }
 
 .card {

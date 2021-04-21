@@ -33,12 +33,14 @@ currentDate.innerHTML = `${day} ${date} ${month}, ${hour}:${minutes}`;
 
 // Search for a city
 
-function showTemp(response){
+function showTemp(response) {
+celsiusTemperature = response.data.main.temp;
 document.querySelector(".MainCity").innerHTML = response.data.name;
-document.querySelector(".currentTemperature").innerHTML = `${Math.round(response.data.main.temp)}°`;
+document.querySelector(".currentTemperature").innerHTML = `${Math.round(response.data.main.temp)}`;
 document.querySelector("#humidity").innerHTML = `${response.data.main.humidity}%`;
 document.querySelector("#wind").innerHTML =Math.round(response.data.wind.speed)
 document.querySelector(".dayForecast").innerHTML =  response.data.weather[0].description;
+
 let iconElement = document.querySelector("#icon");
 iconElement.setAttribute(`src`, `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 icon.Element.setAttribute("alt", response.data.weather[0].description);
@@ -78,29 +80,35 @@ navigator.geolocation.getCurrentPosition(getLocation);
 
 
 
-//function checkMode(event) {
-  // if (tempSwitch.checked) {
-   //let fahr = document.querySelector(".currentTemperature");
-   //fahr.innerHTML = "66°";
-   //let maxFahr = document.querySelector(".maxMin");
-   //maxFahr.innerHTML = "68°/66°";
-//} else {
-  // let cels = document.querySelector(".currentTemperature");
-   //cels.innerHTML = "17°";
-   //let maxCel = document.querySelector(".maxMin");
-   //maxCel.innerHTML = "22°/17°";
-  //}
-//}
 
+///
+function showFahrenheit(event) {
+let temperatureElement = document.querySelector(".currentTemperature");
+let fahrenheitTemp = (celsiusTemperature * 9) / 5+32;
+temperatureElement.innerHTML = Math.round(fahrenheitTemp);
+}
 
-//let tempSwitch = document.querySelector("#myCheck");
-//tempSwitch.addEventListener("click", checkMode);
+function showCelsius(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector(".currentTemperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
 
+}
+
+let celsiusTemperature = null;
 
 let typeCity = document.querySelector(".search");
 typeCity.addEventListener("submit", searchCity);
 
 let currentButton = document.querySelector("#location-button");
 currentButton.addEventListener("click", getPosition);
+
+
+
+let fahrenheitLink = document.querySelector("#fahr");
+fahrenheitLink.addEventListener("click", showFahrenheit);
+
+let celsiusLink = document.querySelector("#cel");
+celsiusLink.addEventListener("click", showCelsius);
 
 search("London");
