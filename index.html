@@ -8,20 +8,21 @@
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://kit.fontawesome.com/803c3a995e.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="container">
+        <div class="weather-container">
         <h1>
             Weather App
         </h1>
         <form class="search">
             <input type="text" placeholder="Please enter city" autocomplete="off" id="search-bar" />
             <input type="submit" value="🔍" id="search-button" />
-            <input type="submit" value="Current Location" id="location-button" />
+            <input type="submit" value="📍 Your Location" id="location-button" />
             <div class="form-check form-switch">
                 
                 <label class="form-check-label" for="flexSwitchCheckDefault">
@@ -42,9 +43,9 @@
                     </span>
                     <br />
                     <br />
-                    🌞Sunrise:6:27 AM
+                    🌞Sunrise:<span class="sunrise">6:27 AM </span>
                     <br />
-                    🌙Sunset: 6:03 PM
+                   🌙Sunset: <span class="sunset">6:03 PM </span>
                 </div>
             </div>
             <div class="col">
@@ -61,8 +62,8 @@
                         
                     </span>
                     <span class="maxMin">
-                        <span id="max">10°</span>
-                        <span id="min">/8°</span>
+                        <span id="max"></span>
+                        <span id="min"></span>
                     </span>
                     <br />
                     <span class="conditions">
@@ -78,65 +79,15 @@
             Next 5 Days Weather Forecast
         </h2>
         <br />
-        <div class="row">
-            <div class="col">
-                <div class="card">
-                    <span class="day-1"> Wednesday</span>
-                    <img src="src/cloud_2601.jpg" width="80px" />
-                    <div class="card-body">
-                        <p class="card-text"> 11°/4°
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <span class="day-2"> Thursday</span>
-                    <img src="src/sun-behind-cloud_26c5.jpg" width="80px" />
-                    <div class="card-body">
-                        <p class="card-text"> 11°/7°
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <span class="day-3"> Friday</span>
-                    <span class=emoji>
-                        <img src="src/cloud-with-rain_App.jpg" width="80px" />
-                    </span>
-                    <div class="card-body">
-                        <p class="card-text"> 9°/6°
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <span class="day-4"> Saturday</span>
-                    <img src="src/cloud_2601.jpg" width="80px" />
-                    <div class="card-body">
-                        <p class="card-text"> 9°/2°
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <span class="day-5"> Sunday</span>
-                    <img src="src/cloud_2601.jpg" width="80px" />
-                    <div class="card-body">
-                        <p class="card-text"> 11°/3°
-                        </p>
-                    </div>
-                </div>
-            </div>
+        <div class="weather-forecast" id="forecast-temp">
+        </div>
         </div>
         <p class="gitHubLink">
             <a href="https://github.com/Valentinawalechan/MyWeatherApp">Open-source code</a>
             by Valentina Di Santo</p>
 
         <script src="index.js"></script>
+        
 </body>
 
 </html>

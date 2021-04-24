@@ -1,12 +1,11 @@
 body {
-  box-sizing: border-box;
   background-color: white;
-  font-family: "Patrick Hand", cursive;
+  font-family: "Montserrat", sans-serif;
 }
 
 h1,
 h2 {
-  color: #6836c5;
+  color: #ffff;
   text-align: center;
   font-weight: 900;
 }
@@ -19,14 +18,18 @@ img {
   display: block;
   margin: 0 auto;
 }
-.container {
+
+.weather-container {
+  box-sizing: border-box;
   max-width: 700px;
-  background-image: url(src/sky.jpg);
+  background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
+
   background-repeat: no-repeat;
   background-size: 700px;
   margin: 0 auto;
   padding: 20px 20px;
-  border: 2px solid #6836c5;
+  border: 2px solid linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
+
   border-radius: 20px;
 }
 
@@ -34,9 +37,10 @@ img {
 #search-bar,
 #search-button {
   border-radius: 10px;
-  background-color: #b697ee;
-  color: #6836c5;
+  background-color: transparent;
+  color: #ffff;
   font-weight: bold;
+  box-shadow: 1px 1px gray;
 }
 
 .form-check-input {
@@ -54,7 +58,7 @@ img {
 #cel,
 #fahr {
   text-decoration: none;
-  color: #6836c5;
+  color: #ffff;
   font-size: medium;
   font-weight: 600;
   cursor: default;
@@ -63,7 +67,7 @@ img {
 .card {
   background-color: transparent;
   text-align: center;
-  border: 1px solid #6836c5;
+  border: 1px solid linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
   border-radius: 20px;
 }
 
@@ -85,8 +89,8 @@ img {
 .forecast,
 .temperature,
 .form-check-label {
-  color: #6836c5;
-  font-size: 22px;
+  color: #ffff;
+  font-size: 18px;
 }
 
 .MainCity,
@@ -114,6 +118,7 @@ img {
 }
 
 .gitHubLink {
+  text-decoration: none;
   text-align: center;
   margin-top: 5px;
   margin-bottom: 2px;

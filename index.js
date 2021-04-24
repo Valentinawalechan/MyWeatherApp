@@ -26,11 +26,45 @@ let minutes = now.getMinutes();
 if(minutes <10) {
   minutes =`0${minutes}`
 }
+///sunrise sunset
+function showUpdate(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  return `${hours}:${minutes}`;
+}
 
 let currentDate = document.querySelector(".date");
 currentDate.innerHTML = `${day} ${date} ${month}, ${hour}:${minutes}`;
-
-
+//// FORECAST
+function showForecast() {
+  let forecastElement=document.querySelector("#forecast-temp");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Sat", "Sun", "Mon", "Tue", "Wed"];
+  days.forEach(function(day) {
+  forecastHTML = forecastHTML + `
+            <div class="col">
+                <div class="card">
+                    <span class="day-1">${day}</span>
+                    <img src="http://openweathermap.org/img/wn/50d@2x.png" width="80px" />
+                    <div class="card-body">
+                        <p class="card-text"> 11°/4°
+                        </p>
+                    </div>
+                </div>
+            </div>`;
+  })
+  
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
 // Search for a city
 
 function showTemp(response) {
@@ -40,6 +74,11 @@ document.querySelector(".currentTemperature").innerHTML = `${Math.round(response
 document.querySelector("#humidity").innerHTML = `${response.data.main.humidity}%`;
 document.querySelector("#wind").innerHTML =Math.round(response.data.wind.speed)
 document.querySelector(".dayForecast").innerHTML =  response.data.weather[0].description;
+document.querySelector("#max").innerHTML = `${Math.round(response.data.main.temp_max)}°`;
+document.querySelector("#min").innerHTML = `/${Math.round(response.data.main.temp_min)}°`;
+
+document.querySelector(".sunrise").innerHTML = `${showUpdate(response.data.sys.sunrise * 1000)} AM`;
+document.querySelector(".sunset").innerHTML = `${showUpdate(response.data.sys.sunset * 1000)} PM`;
 
 let iconElement = document.querySelector("#icon");
 iconElement.setAttribute(`src`, `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
@@ -111,4 +150,6 @@ fahrenheitLink.addEventListener("click", showFahrenheit);
 let celsiusLink = document.querySelector("#cel");
 celsiusLink.addEventListener("click", showCelsius);
 
+
 search("London");
+showForecast();
