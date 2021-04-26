@@ -23,13 +23,11 @@ img {
   box-sizing: border-box;
   max-width: 700px;
   background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
-
   background-repeat: no-repeat;
   background-size: 700px;
   margin: 0 auto;
   padding: 20px 20px;
   border: 2px solid linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
-
   border-radius: 20px;
 }
 
@@ -53,13 +51,13 @@ img {
 .form-check-label {
   position: relative;
   left: 570px;
-  top: 35px;
+  top: 28px;
 }
 #cel,
 #fahr {
   text-decoration: none;
   color: #ffff;
-  font-size: medium;
+  font-size: small;
   font-weight: 600;
   cursor: default;
 }
@@ -90,13 +88,13 @@ img {
 .temperature,
 .form-check-label {
   color: #ffff;
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .MainCity,
 .dayForecast,
 .currentTemperature {
-  font-size: 35px;
+  font-size: 25px;
 }
 
 .dayForecast,
