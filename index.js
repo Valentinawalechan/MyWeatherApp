@@ -95,6 +95,7 @@ document.querySelector("#min").innerHTML = `/${Math.round(response.data.main.tem
 document.querySelector(".sunrise").innerHTML = `${showUpdate(response.data.sys.sunrise*1000)} AM`;
 document.querySelector(".sunset").innerHTML = `${showUpdate(response.data.sys.sunset*1000)} PM`;
 
+
 let iconElement = document.querySelector("#icon");
 iconElement.setAttribute(`src`, `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 iconElement.setAttribute(`alt`, response.data.weather[0].description);
@@ -157,7 +158,6 @@ typeCity.addEventListener("submit", searchCity);
 
 let currentButton = document.querySelector("#location-button");
 currentButton.addEventListener("click", getPosition);
-
 
 
 let fahrenheitLink = document.querySelector("#fahr");
